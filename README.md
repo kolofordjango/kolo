@@ -10,9 +10,6 @@ Kolo is in alpha so there's a decent chance that you will encounter a problem or
 ![Annotated Kolo screenshot](https://user-images.githubusercontent.com/7718702/120298398-f3d17800-c2c1-11eb-9052-9adbbff0b5f5.png)
 
 
-<br>
-<br>
-
 <center>
 <h3>DjangoCon Announcement video</h3>
 <a href="https://www.youtube.com/watch?v=6XR9Y8v7vZ4" alt="Djangocon youtube video"><img width="300px" src="https://user-images.githubusercontent.com/7718702/120330845-204abb80-c2e5-11eb-92b4-51843ec1e9f1.png"></a>
