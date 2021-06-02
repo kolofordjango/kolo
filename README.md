@@ -41,6 +41,7 @@ Kolo only runs when `DEBUG` is set to `True` in your settings.py file. If you wo
 ## Usage
 
 In VSCode, Kolo is available via the sidebar menu. Once clicked, Kolo shows the requests that your Django app recently served:
+
 <img width="300px" src="https://user-images.githubusercontent.com/7718702/120450412-555c1a00-c388-11eb-9b1f-5169814924a8.png">
 
 From this view you can start exploring your requests and what happened within them. Almost every item in this list is expandable, clickable, and will let you dig into the details
@@ -50,7 +51,6 @@ From this view you can start exploring your requests and what happened within th
 
 
 <img width="300px" src="https://user-images.githubusercontent.com/7718702/120464889-55aee200-c395-11eb-8545-b50268fb48d0.png">
-<br>
 
 <img width="400px" src="https://user-images.githubusercontent.com/7718702/120464844-4891f300-c395-11eb-9f86-180317851bea.png">
 
