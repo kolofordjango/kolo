@@ -38,6 +38,35 @@ Kolo is in alpha so there's a decent chance that you will encounter a problem or
 ### Configuration
 Kolo only runs when `DEBUG` is set to `True` in your settings.py file. If you would like to disable Kolo when DEBUG is True, you can set the KOLO_DISABLE environment variable: `KOLO_DISABLE=true`
 
+## Usage
+
+In VSCode, Kolo is available via the sidebar menu. Once clicked, Kolo shows the requests that your Django app recently served:
+<img width="300px" src="https://user-images.githubusercontent.com/7718702/120450412-555c1a00-c388-11eb-9b1f-5169814924a8.png">
+
+From this view you can start exploring your requests and what happened within them. Almost every item in this list is expandable, clickable, and will let you dig into the details
+
+### Inline annotations
+
+
+
+<img width="300px" src="https://user-images.githubusercontent.com/7718702/120464889-55aee200-c395-11eb-8545-b50268fb48d0.png">
+<br>
+
+<img width="400px" src="https://user-images.githubusercontent.com/7718702/120464844-4891f300-c395-11eb-9f86-180317851bea.png">
+
+To enable the inline code annotations for a specific request, click on the top level item in the list of recent requests. You should see a little confirmation message pop up, and then your code will be annotated with inline function arguments, return values, and local variables.
+
+
+### Frame visualization
+
+<img width="600px" src="https://user-images.githubusercontent.com/7718702/120466598-28fbca00-c397-11eb-9656-062e99a62736.png">
+
+
+Click on "Frames" for a specific request, and the frame visualization will open up
+
+
+Check out https://kolo.app for more feature screenshots ✨
+
 
 
 ## Privacy
