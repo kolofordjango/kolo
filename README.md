@@ -47,7 +47,7 @@ Kolo works by writing request data to a SQLite database from within the Django m
 
 
 
-Within your `docker-compose.yml` file, add the following, based on the operating system:
+in your `docker-compose.yml` file, add the following based on your operating system:
 
 #### Mac
 ```yml
