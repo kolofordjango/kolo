@@ -35,8 +35,61 @@ Kolo is in alpha so there's a decent chance that you will encounter a problem or
   - Django 3.0 or newer
   - git (Kolo requires git to accurately show line information in VSCode)
 
+
+### Docker
+For an example of using Docker with Kolo, take a look at the [kolo docker demo repo](https://github.com/kolofordjango/kolo-demo-docker) and the different `docker-compose.yml` files contained there
+
+If you're using Docker for local development, a couple of additional steps are required:
+
+Kolo works by writing request data to a SQLite database from within the Django middleware and then later reading that same request data from the VSCode extension. When Django is running within a Docker container, we need to make sure that the data written by the middleware is written to the right place (where the VSCode extension can then find it.) We can use [Docker Volumes](https://docs.docker.com/storage/volumes/#use-a-volume-with-docker-compose) to accomplish this.
+
+
+
+Within your `docker-compose.yml` file, add the following, based on the operating system (the one you're running on your machine, not on the container)
+
+#### Mac
+```yml
+volumes:
+  - "~/Library/Application\ Support/kolo:/root/.local/share/kolo:rw"
+```
+
+#### Linux
+```yml
+volumes:
+  - "~/.local/share/kolo:/root/.local/share/kolo:rw"
+```
+
+#### Windows
+```yml
+volumes:
+  - "~\\AppData\\Local\\kolo\\kolo:/root/.local/share/kolo:rw"
+```
+
+Within Docker, it's also pretty common to have a generic working directory name such as `/app` or `/code`. If the working directory you're using for your Docker container has a different name to your Django directory (the one that contains the `manage.py` file), then you need to set the `KOLO_PROJECT_NAME` environment variable. Set this to the same name as the directory that contains your project's `manage.py` file. So in the case of the `kolo-demo-docker` project, we set `ENV KOLO_PROJECT_NAME kolo-demo-docker` [in the Dockerfile](https://github.com/kolofordjango/kolo-demo-docker/blob/5512d97d34a5ec8a025c9a2ac7caa39bf8b6e963/Dockerfile#L3-L4).
+
+
 ### Configuration
 Kolo only runs when `DEBUG` is set to `True` in your settings.py file. If you would like to disable Kolo when DEBUG is True, you can set the KOLO_DISABLE environment variable: `KOLO_DISABLE=true`
+
+#### Custom Project Name
+Kolo distinguishes between the different Django projects you have locally. By default Kolo identifies a project in the following way:
+- in Django middleware: the current working directory you start your Django app from (typically this is the directory that contains your `manage.py` file)
+- in VSCode: the name of the workspace folder you have open in VSCode
+
+Kolo needs to detect the same project name both in the Django middleware and in VScode, otherwise no data will show up.
+
+You can override these two values:
+- The `KOLO_PROJECT_NAME` environment variable will set the project name used by the Kolo django middleware
+- The `kolo.projectName` setting in VSCode will set the project name used by the Kolo VSCode extension
+
+If you don't start your Django app using `python manage.py runserver`, set a custom project name via the `KOLO_PROJECT_NAME` environment variable. If you're using Docker to run Django locally, take a look at the Docker section above.
+
+If your VSCode workspace folder doesn't contain the `manage.py` file, you should manually set the `kolo.projectName` setting in VSCode:
+
+<img src="https://user-images.githubusercontent.com/7718702/121227291-4d6a1180-c883-11eb-9e38-d442a8908bda.png" alt="custom project name vscode" width="300px">
+
+`KOLO_PROJECT_NAME` and `kolo.projectName` should have the same value in the same Django project
+
 
 ## Usage
 
