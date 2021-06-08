@@ -39,13 +39,15 @@ Kolo is in alpha so there's a decent chance that you will encounter a problem or
 ### Docker
 For an example of using Docker with Kolo, take a look at the [kolo docker demo repo](https://github.com/kolofordjango/kolo-demo-docker) and the different `docker-compose.yml` files contained there
 
+<br>
+
 If you're using Docker for local development, a couple of additional steps are required:
 
 Kolo works by writing request data to a SQLite database from within the Django middleware and then later reading that same request data from the VSCode extension. When Django is running within a Docker container, we need to make sure that the data written by the middleware is written to the right place (where the VSCode extension can then find it.) We can use [Docker Volumes](https://docs.docker.com/storage/volumes/#use-a-volume-with-docker-compose) to accomplish this.
 
 
 
-Within your `docker-compose.yml` file, add the following, based on the operating system (the one you're running on your machine, not on the container)
+Within your `docker-compose.yml` file, add the following, based on the operating system:
 
 #### Mac
 ```yml
@@ -86,7 +88,7 @@ If you don't start your Django app using `python manage.py runserver`, set a cus
 
 If your VSCode workspace folder doesn't contain the `manage.py` file, you should manually set the `kolo.projectName` setting in VSCode:
 
-<img src="https://user-images.githubusercontent.com/7718702/121227291-4d6a1180-c883-11eb-9e38-d442a8908bda.png" alt="custom project name vscode" width="300px">
+<img src="https://user-images.githubusercontent.com/7718702/121227291-4d6a1180-c883-11eb-9e38-d442a8908bda.png" alt="custom project name vscode" width="400px">
 
 `KOLO_PROJECT_NAME` and `kolo.projectName` should have the same value in the same Django project
 
