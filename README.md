@@ -31,8 +31,8 @@ Kolo is in alpha so there's a decent chance that you will encounter a problem or
 
 ### Minimum requirements
   - VSCode version 1.56 (released April 2021) or newer
-  - Python 3.8 or newer
-  - Django 3.0 or newer
+  - Python 3.7 or newer
+  - Django 2.2 or newer
   - git (Kolo requires git to accurately show line information in VSCode)
 
 
