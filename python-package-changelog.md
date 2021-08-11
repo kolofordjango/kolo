@@ -6,6 +6,11 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.0.3
+
+_2021-08-11_
+
+- Add changelog link pointing at this file on PyPI page: https://pypi.org/project/kolo/
 
 ## 1.0.2
 
