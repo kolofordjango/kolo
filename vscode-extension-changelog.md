@@ -1,6 +1,6 @@
 # VSCode Extension Changelog
 
-_Kolo consists of a python package and a VSCode extension. This is the changelog for the VSCode extension. To view the changelog of the Python package [go here](./vscode-extension-changelog.md)_
+_Kolo consists of a python package and a VSCode extension. This is the changelog for the VSCode extension. To view the changelog of the Python package [go here](./python-package-changelog.md)_
 
 _We recommend using the latest version of the kolo python package and VSCode extension. That way you’ll run the most stable and feature-rich versions_
 
