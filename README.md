@@ -30,7 +30,10 @@ Kolo consists of a Python package and a VSCode extension:
 ### New & Noteworthy features
 
 - Kolo now automatically selects the latest request served by your Django app, meaning less manual work to get the most relevant context alongside your code
-      ![automatically selecting latest invocation](https://user-images.githubusercontent.com/7718702/128250353-f701ddc6-c799-4acc-8cc2-e8defdffb5d0.png)
+  
+     <img width="500px" src="https://user-images.githubusercontent.com/7718702/128250353-f701ddc6-c799-4acc-8cc2-e8defdffb5d0.png" alt="automatically selecting latest invocation"> 
+      
+      
 - Alongside many performance and stability improvements, we refactored how we exclude and hide library code. If you start seeing library code show up in Kolo alongside your own code, please open a new issue on this repo
 - Support for GitHub Codespaces
 - Support for Python 3.6
