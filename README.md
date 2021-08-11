@@ -2,7 +2,11 @@
 
 See everything happening in your running Django app. All without leaving VSCode
 
-![status: alpha](https://img.shields.io/badge/status-alpha-blue)
+![status: alpha](https://img.shields.io/badge/status-alpha-blue) [![vscode downloads](https://img.shields.io/visual-studio-marketplace/i/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![vscode last updated](https://img.shields.io/visual-studio-marketplace/last-updated/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) 
+
+[![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
+
+![supported python versions](https://img.shields.io/pypi/pyversions/kolo) ![supported django versions](https://img.shields.io/pypi/djversions/kolo?label=django)
 
 Kolo is in alpha so there's a decent chance that you will encounter a problem or bug. When you do, please open an issue on this repository and we'll look into it 🙏
 
@@ -31,7 +35,7 @@ Kolo is in alpha so there's a decent chance that you will encounter a problem or
 
 ### Minimum requirements
   - VSCode version 1.56 (released April 2021) or newer
-  - Python 3.7 or newer
+  - Python 3.6 or newer
   - Django 2.2 or newer
   - git (Kolo requires git to accurately show line information in VSCode)
 
