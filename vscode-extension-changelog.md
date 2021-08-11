@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.1.1
+_2021-08-11_
+
+- Add link to this changelog to the VSCode marketplace page: https://marketplace.visualstudio.com/items?itemName=kolo.kolo
 
 ## 1.1.0
 _2021-08-11_
