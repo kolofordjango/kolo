@@ -6,6 +6,12 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.1.2
+_2021-08-18_
+
+- Bundle the extension code, leading to faster startup time and a smaller overall download size
+- Include additional sqlite bindings for better support across Linux, Windows, and macOS (including support for Apple Silicon)
+
 ## 1.1.1
 _2021-08-11_
 
