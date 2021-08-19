@@ -6,6 +6,11 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.0.4
+
+_2021-08-19_
+- Exclude attrs generated frames. The refactor of the 1.0.0 release resulted in these being included, but now they're excluded again!
+
 ## 1.0.3
 
 _2021-08-11_
