@@ -6,6 +6,12 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.1.3
+_2021-09-12_
+- Improve the UX of selecting a frame from the visualization 
+  - Clicking on a frame in the visualization will now open the code in such a way that you don't have to manually re-arrange tabs to continue exploring
+- Fig bug where an invocation wouldn't load if we couldn't find a corresponding HTTP response for an outgoing HTTP request
+
 ## 1.1.2
 _2021-08-18_
 
