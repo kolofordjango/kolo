@@ -29,6 +29,12 @@ Kolo consists of a Python package and a VSCode extension:
 
 ### New & Noteworthy features
 - Much improved support for :sparkles: **exceptions** :sparkles: Jump straight to where the problem occurred and see the all the contextual information to understand _why_ it happened
+    
+    <img  width="300px" src="https://user-images.githubusercontent.com/7718702/133599943-13502c16-62ef-4e2e-8ac9-5916ff355904.png">
+    <br />
+    <br />
+    
+    <img width="200px" src="https://user-images.githubusercontent.com/7718702/133600081-037413f9-0708-4ef9-aa02-0cf85ca75b46.png">
 - Configure Kolo to ignore certain paths (like `/static/`) and include/ignore frames based on file path
 - Kolo now automatically selects the latest request served by your Django app, meaning less manual work to get the most relevant context alongside your code
   

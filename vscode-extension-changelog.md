@@ -6,6 +6,16 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.2.0
+_2021-09-16_
+- Much improved support for :sparkles: **exceptions** :sparkles: Jump straight to where the problem occurred and see the all the contextual information to understand _why_ it happened
+ 
+    <img  width="300px" src="https://user-images.githubusercontent.com/7718702/133599943-13502c16-62ef-4e2e-8ac9-5916ff355904.png">
+    <br />
+    <br />
+    
+    <img width="200px" src="https://user-images.githubusercontent.com/7718702/133600081-037413f9-0708-4ef9-aa02-0cf85ca75b46.png">
+
 ## 1.1.3
 _2021-09-12_
 - Improve the UX of selecting a frame from the visualization 
