@@ -6,6 +6,13 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.1.0
+_2021-09-16_
+- Additional configuration options via .kolo/config.toml
+  - You can now configure Kolo to exclude certain URL paths (like `/static/`) and also explicitly include and exclude frames based on filepath
+- Better support for capturing those exceptions that lead to a 500 error
+- Several bug fixes and stability improvements!
+
 ## 1.0.4
 
 _2021-08-19_

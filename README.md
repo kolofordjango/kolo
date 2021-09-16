@@ -28,15 +28,13 @@ Kolo consists of a Python package and a VSCode extension:
 - [Changelog for Kolo VSCode extension](./vscode-extension-changelog.md)
 
 ### New & Noteworthy features
-
+- Much improved support for :sparkles: **exceptions** :sparkles: Jump straight to where the problem occurred and see the all the contextual information to understand _why_ it happened
+- Configure Kolo to ignore certain paths (like `/static/`) and include/ignore frames based on file path
 - Kolo now automatically selects the latest request served by your Django app, meaning less manual work to get the most relevant context alongside your code
   
      <img width="500px" src="https://user-images.githubusercontent.com/7718702/128250353-f701ddc6-c799-4acc-8cc2-e8defdffb5d0.png" alt="automatically selecting latest invocation"> 
       
       
-- Alongside many performance and stability improvements, we refactored how we exclude and hide library code. If you start seeing library code show up in Kolo alongside your own code, please open a new issue on this repo
-- Support for GitHub Codespaces
-- Support for Python 3.6
 
 
 ## Installation
@@ -112,6 +110,37 @@ If your VSCode workspace folder doesn't contain the `manage.py` file, you should
 
 `KOLO_PROJECT_NAME` and `kolo.projectName` should have the same value in the same Django project
 
+#### .kolo/config.toml
+
+You can specify request paths to be ignored via the `.kolo/config.toml` file:
+
+
+```toml
+# .kolo/config.toml
+
+[filters]
+# Kolo will ignore all requests that include /static/ in their path
+ignore_request_paths = ["/static/"]
+
+```
+
+If you would like to explicitly include or ignore certain frames, you can also do that:
+
+```toml
+# .kolo/config.toml
+
+[filters]
+# Kolo will include all frames from the requests library, since each frame's file path would contain /requests/
+include_frames = ["/requests/"]
+
+# Kolo will ignore all frames from internal/utils.py
+# This would be useful if utils.py does a lot of function calls that you don't particularly care about
+ignore_frames = ["internal/utils.py"]
+
+```
+
+
+By default, Kolo expects the `.kolo` directory to be at the same folder level as your `manage.py` file, but you can specify a custom location for the `.kolo` directory via the `KOLO_PATH` environment variable
 
 ## Usage
 
