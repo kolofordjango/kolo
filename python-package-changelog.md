@@ -8,7 +8,7 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 ## 1.1.1
 _2021-09-20_
-- Fix bug where Kolo would prematurely evaluate not-yet-evaluated Querysets
+- Fix bug where Kolo would prematurely evaluate not-yet-evaluated Querysets (credit to @vhtkrk for reporting this bug!)
 
 
 ## 1.1.0
