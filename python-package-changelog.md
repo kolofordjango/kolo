@@ -6,6 +6,11 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.1.1
+_2021-09-20_
+- Fix bug where Kolo would prematurely evaluate not-yet-evaluated Querysets
+
+
 ## 1.1.0
 _2021-09-16_
 - Additional configuration options via .kolo/config.toml
