@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.1.2
+_2021-09-21_
+- Fix bug where Kolo would cause additional SQL queries when the evaluation of a third party __repr__ would call __repr__ on a django queryset. Specifically this was the case with Django Rest Framework (one again credit to @vhtkrk for reporting this https://github.com/kolofordjango/kolo/issues/4)
+
 ## 1.1.1
 _2021-09-20_
 - Fix bug where Kolo would prematurely evaluate not-yet-evaluated Querysets (credit to @vhtkrk for reporting this bug!)
