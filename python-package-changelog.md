@@ -8,7 +8,7 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 ## 1.1.2
 _2021-09-21_
-- Fix bug where Kolo would cause additional SQL queries when the evaluation of a third party __repr__ would call __repr__ on a django queryset. Specifically this was the case with Django Rest Framework (one again credit to @vhtkrk for reporting this https://github.com/kolofordjango/kolo/issues/4)
+- Fix bug where Kolo would cause additional SQL queries when the evaluation of a third party `__repr__` would call `__repr__` on a django queryset. Specifically this was the case with Django Rest Framework (as with the previous change log item, credit to @vhtkrk for reporting this https://github.com/kolofordjango/kolo/issues/4)
 
 ## 1.1.1
 _2021-09-20_
