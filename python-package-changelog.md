@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.1.3
+_2021-09-30_
+- Collect `scheme` from the incoming HTTP request which assists the VSCode extension in reliably replaying requests
+
 ## 1.1.2
 _2021-09-21_
 - Fix bug where Kolo would cause additional SQL queries when the evaluation of a third party `__repr__` would call `__repr__` on a django queryset. Specifically this was the case with Django Rest Framework (as with the previous change log item, credit to @vhtkrk for reporting this https://github.com/kolofordjango/kolo/issues/4)
