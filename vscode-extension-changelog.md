@@ -6,6 +6,12 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.3.0
+_2021-09-30_
+- Add support for replaying HTTP requests ⏪
+
+  https://user-images.githubusercontent.com/7718702/135449686-815bc247-4cb3-4fb4-8526-8a67ed6fd743.mov
+
 ## 1.2.0
 _2021-09-16_
 - Much improved support for :sparkles: **exceptions** :sparkles: Jump straight to where the problem occurred and see the all the contextual information to understand _why_ it happened
