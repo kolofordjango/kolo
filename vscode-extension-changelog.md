@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.4.0
+_2021-10-18_
+- Add section in sidebar with quick links to documentation and Discord
+
 ## 1.3.0
 _2021-09-30_
 - Add support for replaying HTTP requests ⏪
