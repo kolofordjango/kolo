@@ -2,7 +2,7 @@
 
 See everything happening in your running Django app. All without leaving VSCode
 
-![status: alpha](https://img.shields.io/badge/status-alpha-blue) [![vscode downloads](https://img.shields.io/visual-studio-marketplace/i/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![vscode last updated](https://img.shields.io/visual-studio-marketplace/last-updated/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) ![Chat on Discord](https://img.shields.io/discord/899363528660635738?label=Chat%20on%20Discord)
+![status: alpha](https://img.shields.io/badge/status-alpha-blue) [![vscode downloads](https://img.shields.io/visual-studio-marketplace/i/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![vscode last updated](https://img.shields.io/visual-studio-marketplace/last-updated/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![Chat on Discord](https://img.shields.io/discord/899363528660635738?label=Chat%20on%20Discord)](https://discord.com/invite/FsTVcFwYUn)
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
