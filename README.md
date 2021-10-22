@@ -2,13 +2,13 @@
 
 See everything happening in your running Django app. All without leaving VSCode
 
-![status: alpha](https://img.shields.io/badge/status-alpha-blue) [![vscode downloads](https://img.shields.io/visual-studio-marketplace/i/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![vscode last updated](https://img.shields.io/visual-studio-marketplace/last-updated/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![Chat on Discord](https://img.shields.io/discord/899363528660635738?label=Chat%20on%20Discord)](https://discord.com/invite/FsTVcFwYUn)
+![status: beta](https://img.shields.io/badge/status-beta-blue) [![vscode downloads](https://img.shields.io/visual-studio-marketplace/i/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![vscode last updated](https://img.shields.io/visual-studio-marketplace/last-updated/kolo.kolo)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![Chat on Discord](https://img.shields.io/discord/899363528660635738?label=Chat%20on%20Discord)](https://discord.com/invite/FsTVcFwYUn)
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo) [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
 ![supported python versions](https://img.shields.io/pypi/pyversions/kolo) ![supported django versions](https://img.shields.io/pypi/djversions/kolo?label=django)
 
-Kolo is in alpha so there's a decent chance that you will encounter a problem or bug. When you do, please open an issue on this repository and we'll look into it 🙏
+Kolo is in beta so there's a chance that you will encounter a problem or bug. When you do, please open an issue on this repository and we'll look into it 🙏
 
 
 ![Annotated Kolo screenshot](https://user-images.githubusercontent.com/7718702/120298398-f3d17800-c2c1-11eb-9052-9adbbff0b5f5.png)
@@ -187,7 +187,7 @@ The data Kolo collects at runtime is stored in a local SQLite database on your m
 
 
 ## Support
-Running into problems? Kolo is in alpha, so it's quite likely that you will run into a problem. When you do, please open an issue on this repository or email us: support@kolo.app
+Running into problems? Kolo is in beta, so it's possible you will run into a problem. When you do, please open an issue on this repository or email us: support@kolo.app
 
 Looking for assistance? We're here to help get Kolo set up on your codebase: [Schedule Kolo set up](https://calendly.com/wilhelmklopp)
 
