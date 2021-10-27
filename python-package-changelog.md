@@ -6,6 +6,17 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.2.1
+_2021-10-26_
+- Fix issue where Kolo would exhaust iterators as part of processing a frame: https://github.com/kolofordjango/kolo/issues/9
+
+## 1.2.0
+_2021-10-25_
+- Capture the call site for each captured frame
+- Store Kolo database in `.kolo` (alongside the user's working directory) via the `KOLO_STORE_IN_PROJECT=1` environment variable. (To be the default soon)
+- Capture information about where in the user code SQL queries originate
+
+
 ## 1.1.3
 _2021-09-30_
 - Collect `scheme` from the incoming HTTP request which assists the VSCode extension in reliably replaying requests
