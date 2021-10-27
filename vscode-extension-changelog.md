@@ -6,6 +6,19 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.5.1
+_2021-10-27_
+- Ensure Kolo can run on Apple Silicon
+
+## 1.5.0
+_2021-10-25_
+- Read Kolo data from `.kolo/db.sqlite3` instead of from the OS specific user data directory (to become the default soon). More details here: https://github.com/kolofordjango/kolo/issues/8
+- Added the "Path to Kolo Directory" setting which specifies the path to the `.kolo` folder (:point_up:) as well as helping Kolo understand at which place to open files. Particularly useful if you're using Docker or if your VSCode workspace does not contain the `.kolo` directory at the top level
+
+## 1.4.1
+_2021-10-2_
+- Update dependencies
+
 ## 1.4.0
 _2021-10-18_
 - Add section in sidebar with quick links to documentation and Discord
