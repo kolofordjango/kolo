@@ -6,6 +6,12 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+
+## 1.6.0
+_2021-10-29_
+- Increase the number of recent requests shown from 5 to 10
+- Add pagination to look over requests older than the last 10
+ 
 ## 1.5.1
 _2021-10-27_
 - Ensure Kolo can run on Apple Silicon
