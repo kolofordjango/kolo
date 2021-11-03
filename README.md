@@ -218,10 +218,9 @@ The following `.kolo/request-body.js` code converts the payload to just regular 
     }
     const unparsed = request_body.replace("payload=", "");
     const parsed_json_body = JSON.parse(unparsed);
-    const special_slack_request_body = parsed_json_body;
 
     return {
-      body: JSON.stringify(special_slack_request_body, null, 2),
+      body: JSON.stringify(parsed_json_body, null, 2),
       language: "json"
     };
   }
@@ -243,7 +242,6 @@ Kolo expects an object with a top level `body` key to be returned in `request-bo
 ```js
 return {
   body: "my custom body",
-
 }
 ```
 
