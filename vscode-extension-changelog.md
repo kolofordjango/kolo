@@ -7,6 +7,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
 
+## 1.7.0
+_2021-11-03_
+- Add support for custom request body and custom request description formatting
+
 ## 1.6.0
 _2021-10-29_
 - Increase the number of recent requests shown from 5 to 10
