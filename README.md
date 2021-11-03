@@ -148,6 +148,110 @@ ignore_frames = ["internal/utils.py"]
 
 By default, Kolo expects the `.kolo` directory to be at the same folder level as your `manage.py` file, but you can specify a custom location for the `.kolo` directory via the `KOLO_PATH` environment variable
 
+#### Custom request description and custom request body formatting
+
+In some cases, just seeing the path of the HTTP request in the sidebar is not sufficient for identifying a request. Say, for example, that your Django app is processing webhook events from Stripe. All those events will arrive at the same path in your app, making it difficult to distinguish different types of events.
+
+The `request-body.js` and `request-description.js` files are here to help us with this!
+
+By default, a set of webhook events from Stripe will look like this:
+
+<img width="400px" src="https://user-images.githubusercontent.com/7718702/140083849-4bd39dff-f1d9-4293-81a4-45ea37867a0a.png">
+
+But if we add provide the following JavaScript code in our `.kolo/request-description.js` file:
+```js
+(function () {
+  if (
+    request.headers.hasOwnProperty("Stripe-Signature")
+  ) {
+    parsed_body = JSON.parse(request.body)
+    return {
+      description: parsed_body.type
+    }
+  }
+})();
+
+```
+
+Then, Kolo will show the Stripe event type for each request, making it much easier to distinguish between the different payloads we received from Stripe :tada:
+
+<img width="400px" src="https://user-images.githubusercontent.com/7718702/140084399-27e2d472-2b8d-4ff2-80a7-3154730a13c9.png">
+
+#### request-description.js
+
+Within `.kolo/request-description.js`, a global `request` variable is available. The following fields exist on this variable:
+```js
+  scheme: string;
+  body: string;
+  method: string;
+  path_info: string;
+  headers: {
+    [key: string]: string;
+  };
+```
+
+Kolo expects an object with a top level `description` key to be returned in `request-description.js`, the value of which must be a string. So for example:
+```js
+return {
+  description: "my custom description"
+}
+```
+
+If you would like to explicitly not have a description for a request, you can `return undefined`
+
+
+#### request-body.js
+
+`request-body.js` is a useful tool when you'd like to reshape the arriving request body purely for display purposes within Kolo. The code in `.kolo/request-body.js` executes before `request-description.js` meaning that your custom request description code can take adavantage of the reshaped body.
+
+For example, some of the requests a Slack app might receive from Slack have a somewhat unusual format: Slack sends the request with the `x-www-form-urlencoded` content type containing only a single key called "payload" which then contains a JSON string of the actual payload. This request body can be a bit unwieldy, it would be more convenient to directly interact with the JSON payload. This is exactly what `request-body.js` can help us achieve.
+
+The following `.kolo/request-body.js` code converts the payload to just regular JSON for display within Kolo:
+```js
+(function () {
+  if (request.body.startsWith("payload=") && request.headers["User-Agent"].includes("Slackbot")) {
+    let request_body;
+    try {
+      request_body = decodeURIComponent(request.body);
+    } catch (err) {
+      request_body = request.body;
+    }
+    const unparsed = request_body.replace("payload=", "");
+    const parsed_json_body = JSON.parse(unparsed);
+    const special_slack_request_body = parsed_json_body;
+
+    return {
+      body: JSON.stringify(special_slack_request_body, null, 2),
+      language: "json"
+    };
+  }
+})();
+```
+
+Within `.kolo/request-body.js`, a global `request` variable is available. The following fields exist on this variable:
+```js
+  scheme: string;
+  body: string;
+  method: string;
+  path_info: string;
+  headers: {
+    [key: string]: string;
+  };
+```
+
+Kolo expects an object with a top level `body` key to be returned in `request-body.js`, the value of which must be a string:
+```js
+return {
+  body: "my custom body",
+
+}
+```
+
+You may also optionally pass a `language` key alongside `body`, which Kolo will pass along to VSCode when viewind the body.
+
+If you would like to explicitly not have a custom request body for a request, you can `return undefined`
+
+
 ## Usage
 
 In VSCode, Kolo is available via the sidebar menu. Once clicked, Kolo shows the requests that your Django app recently served:
