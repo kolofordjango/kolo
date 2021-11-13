@@ -61,60 +61,45 @@ Kolo consists of a Python package and a VSCode extension:
 
 
 ### Docker
-For an example of using Docker with Kolo, take a look at the [kolo docker demo repo](https://github.com/kolofordjango/kolo-demo-docker) and the different `docker-compose.yml` files contained there
 
-<br>
+Kolo supports Docker for local Django development. In many cases, no additional configuration is required for Kolo to work.
 
-If you're using Docker for local development, a couple of additional steps are required:
+Kolo relies on a volume definition to your working directory, which most projects already have configured. If your project does not yet have this configured, then you will need to set this up in order for Kolo to work.
 
-Kolo works by writing request data to a SQLite database from within the Django middleware and then later reading that same request data from the VSCode extension. When Django is running within a Docker container, we need to make sure that the data written by the middleware is written to the right place (where the VSCode extension can then find it.) We can use [Docker Volumes](https://docs.docker.com/storage/volumes/#use-a-volume-with-docker-compose) to accomplish this.
+So for example, in your `Dockerfile` you might have something like this specified:
 
-
-
-in your `docker-compose.yml` file, add the following based on your operating system:
-
-#### Mac
-```yml
-volumes:
-  - "~/Library/Application\ Support/kolo:/root/.local/share/kolo:rw"
+```Dockerfile
+WORKDIR /code
+COPY . ./
 ```
 
-#### Linux
+And then in your `docker-compose.yml` file, you will need the following corresponding volume definition:
+
 ```yml
 volumes:
-  - "~/.local/share/kolo:/root/.local/share/kolo:rw"
+    - .:/code
 ```
 
-#### Windows
-```yml
-volumes:
-  - "~\\AppData\\Local\\kolo\\kolo:/root/.local/share/kolo:rw"
-```
+Kolo works by writing data to a sqlite database from within your running Django app. This volume definition ensures that the `db.sqlite3` file that Kolo stores in the `.kolo` directory is stored not just inside Docker but also on your host operating system, where it can then be read by the Kolo VSCode extension.
 
-Within Docker, it's also pretty common to have a generic working directory name such as `/app` or `/code`. If the working directory you're using for your Docker container has a different name to your Django directory (the one that contains the `manage.py` file), then you need to set the `KOLO_PROJECT_NAME` environment variable. Set this to the same name as the directory that contains your project's `manage.py` file. So in the case of the `kolo-demo-docker` project, we set `ENV KOLO_PROJECT_NAME kolo-demo-docker` [in the Dockerfile](https://github.com/kolofordjango/kolo-demo-docker/blob/5512d97d34a5ec8a025c9a2ac7caa39bf8b6e963/Dockerfile#L3-L4).
 
 
 ### Configuration
 Kolo only runs when `DEBUG` is set to `True` in your settings.py file. If you would like to disable Kolo when DEBUG is True, you can set the KOLO_DISABLE environment variable: `KOLO_DISABLE=true`
 
-#### Custom Project Name
-Kolo distinguishes between the different Django projects you have locally. By default Kolo identifies a project in the following way:
-- in Django middleware: the current working directory you start your Django app from (typically this is the directory that contains your `manage.py` file)
-- in VSCode: the name of the workspace folder you have open in VSCode
+#### Path To Kolo Directory
 
-Kolo needs to detect the same project name both in the Django middleware and in VScode, otherwise no data will show up.
+If your VSCode workspace folder doesn't contain the `manage.py` file (and the adjacent automatically generated `.kolo` directory) at the top level, then you will need to set the "Path To Kolo Directory" setting in VSCode:
 
-You can override these two values:
-- The `KOLO_PROJECT_NAME` environment variable will set the project name used by the Kolo django middleware
-- The `kolo.projectName` setting in VSCode will set the project name used by the Kolo VSCode extension
+![path to kolo directory setting VSCode](https://user-images.githubusercontent.com/7718702/138758494-65061ad2-797d-4baa-88d6-d2c027a87395.png)
 
-If you don't start your Django app using `python manage.py runserver`, set a custom project name via the `KOLO_PROJECT_NAME` environment variable. If you're using Docker to run Django locally, take a look at the Docker section above.
+For example, you might have a top level VSCode workspace called "myproject" which has a backend folder that contains your Django app. If `backend` is the folder that includes your `manage.py` file and the `.kolo` directory, then the setting you need to set here is: backend
 
-If your VSCode workspace folder doesn't contain the `manage.py` file, you should manually set the `kolo.projectName` setting in VSCode:
 
-<img src="https://user-images.githubusercontent.com/7718702/121227291-4d6a1180-c883-11eb-9e38-d442a8908bda.png" alt="custom project name vscode" width="400px">
+##### KOLO_PATH
 
-`KOLO_PROJECT_NAME` and `kolo.projectName` should have the same value in the same Django project
+If you don't start your Django app using `python manage.py runserver`, you can make use of the `KOLO_PATH` environment variable to determine the path where Kolo should create the `.kolo` directory. Set `KOLO_PATH` like any other environment variable that your Django app makes use of.
+
 
 #### .kolo/config.toml
 
@@ -158,7 +143,7 @@ By default, a set of webhook events from Stripe will look like this:
 
 <img width="400px" src="https://user-images.githubusercontent.com/7718702/140083849-4bd39dff-f1d9-4293-81a4-45ea37867a0a.png">
 
-But if we add provide the following JavaScript code in our `.kolo/request-description.js` file:
+But if we have the following JavaScript code in our `.kolo/request-description.js` file:
 ```js
 (function () {
   if (
