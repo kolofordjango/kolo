@@ -28,6 +28,14 @@ Kolo consists of a Python package and a VSCode extension:
 - [Changelog for Kolo VSCode extension](./vscode-extension-changelog.md)
 
 ### New & Noteworthy features
+- Show which line of your code caused Django execute a SQL query
+
+  <img width="300px" src="https://user-images.githubusercontent.com/7718702/144677065-8ffa6d46-1130-4a47-b48e-8210e61a0a88.png">
+      
+- Significantly simpler Kolo setup if you use Docker for local Django development
+- Support for custom request descriptions so that you can easily distinguish different requests even if they arrive at the same path
+
+  <img width="300px" src="https://user-images.githubusercontent.com/7718702/140084399-27e2d472-2b8d-4ff2-80a7-3154730a13c9.png">
 - Much improved support for :sparkles: **exceptions** :sparkles: Jump straight to where the problem occurred and see the all the contextual information to understand _why_ it happened
     
     <img  width="300px" src="https://user-images.githubusercontent.com/7718702/133599943-13502c16-62ef-4e2e-8ac9-5916ff355904.png">
@@ -35,12 +43,6 @@ Kolo consists of a Python package and a VSCode extension:
     <br />
     
     <img width="200px" src="https://user-images.githubusercontent.com/7718702/133600081-037413f9-0708-4ef9-aa02-0cf85ca75b46.png">
-- Configure Kolo to ignore certain paths (like `/static/`) and include/ignore frames based on file path
-- Kolo now automatically selects the latest request served by your Django app, meaning less manual work to get the most relevant context alongside your code
-  
-     <img width="500px" src="https://user-images.githubusercontent.com/7718702/128250353-f701ddc6-c799-4acc-8cc2-e8defdffb5d0.png" alt="automatically selecting latest invocation"> 
-      
-      
 
 
 ## Installation
@@ -76,7 +78,7 @@ COPY . ./
 And then in your `docker-compose.yml` file, you will need the following corresponding volume definition:
 
 ```yml
-volumes:
+  volumes:
     - .:/code
 ```
 
