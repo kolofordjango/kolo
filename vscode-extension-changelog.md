@@ -10,6 +10,8 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 ## 1.7.0
 _2021-12-03_
 - Show where in your code each SQL query originated
+
+
   <img src="https://user-images.githubusercontent.com/7718702/144677065-8ffa6d46-1130-4a47-b48e-8210e61a0a88.png" width=300px>
 - Fix bug where in some cases it was impossible to interact with leaf nodes in the tree visualization
 
