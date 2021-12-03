@@ -10,13 +10,15 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 ## 1.7.0
 _2021-12-03_
 - Show where in your code each SQL query originated
-  <img src="https://user-images.githubusercontent.com/7718702/144671730-66e78fa4-aa05-4508-8511-62a6b65415b8.png" width=300px>
+  <img src="https://user-images.githubusercontent.com/7718702/144677065-8ffa6d46-1130-4a47-b48e-8210e61a0a88.png" width=300px>
 - Fix bug where in some cases it was impossible to interact with leaf nodes in the tree visualization
 
 
 ## 1.7.0
 _2021-11-03_
-- Add support for custom request body and custom request description formatting
+- Support for custom request descriptions so that you can easily distinguish different requests even if they arrive at the same path
+
+  <img width="300px" src="https://user-images.githubusercontent.com/7718702/140084399-27e2d472-2b8d-4ff2-80a7-3154730a13c9.png">
 
 ## 1.6.0
 _2021-10-29_
