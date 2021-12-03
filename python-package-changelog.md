@@ -6,6 +6,12 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.3.1
+_2021-11-25_
+- Support for standard library `urllib`
+- Better support for when `urllib3` is used standalone (without `requests`)
+- Decompress gzipped HttpRespones for display in Kolo (Fixes https://github.com/kolofordjango/kolo/issues/10)
+
 ## 1.3.0
 _2021-11-10_
 - Default to storing the Kolo database in `.kolo/db.sqlite3`. The `.kolo` directory is adjacent to your `manage.py` file by default and can otherwise be customized using the `KOLO_PATH` environment variable
