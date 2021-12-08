@@ -28,6 +28,9 @@ Kolo consists of a Python package and a VSCode extension:
 - [Changelog for Kolo VSCode extension](./vscode-extension-changelog.md)
 
 ### New & Noteworthy features
+- The frame visualization now includes a :sparkles: beautiful :sparkles: flame graph that shows timing information for each function call ⏱️ 
+
+  <img src="https://user-images.githubusercontent.com/7718702/145239425-ad942d9c-b0df-4fb5-b885-4004c80b5694.png" width=500px>
 - Show which line of your code caused Django execute a SQL query
 
   <img width="300px" src="https://user-images.githubusercontent.com/7718702/144677065-8ffa6d46-1130-4a47-b48e-8210e61a0a88.png">

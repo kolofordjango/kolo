@@ -7,7 +7,13 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
 
-## 1.7.0
+## 1.9.0
+_2021-12-07_
+- The frame visualization now includes a :sparkles: beautiful :sparkles: flame graph that shows timing information for each function call ⏱️ 
+
+  <img src="https://user-images.githubusercontent.com/7718702/145239425-ad942d9c-b0df-4fb5-b885-4004c80b5694.png" width=500px>
+
+## 1.8.0
 _2021-12-03_
 - Show where in your code each SQL query originated
 
