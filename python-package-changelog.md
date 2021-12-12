@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.3.2
+_2021-12-12_
+- Support for Django 4.0
+
 ## 1.3.1
 _2021-11-25_
 - Support for standard library `urllib`
