@@ -7,6 +7,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
 
+## 1.9.1
+_2022-01-01_
+- Fixed a bug where opening the file/line where a SQL query was made led to "file not found" errors, because the `kolo.pathToKoloDirectory` setting was not respected. Thanks to @court-js for the report :bow: https://github.com/kolofordjango/kolo/issues/11
+ 
 ## 1.9.0
 _2021-12-07_
 - The frame visualization now includes a :sparkles: beautiful :sparkles: flame graph that shows timing information for each function call ⏱️ 
