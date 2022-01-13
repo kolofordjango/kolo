@@ -6,6 +6,15 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.3.4
+_2022-01-12_
+- Fix a regression in 1.3.3 where Kolo was throwing an error when it was disabled
+
+## 1.3.3
+_2022-01-12_
+- Fix a dependency incompatibility issue by moving our build process from poetry to pip + setup.cfg
+- Capture urls information for the request Django is processing
+
 ## 1.3.2
 _2021-12-12_
 - Support for Django 4.0
