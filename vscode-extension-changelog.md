@@ -6,6 +6,11 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.10.0
+_2022-01-15_
+- Indicate which SQL queries are duplicate in the "SQL Queries made" view
+
+  <img src="https://user-images.githubusercontent.com/7718702/149631547-b57a0ed3-db96-4ebc-9e89-d7e7c0ca2e38.png" width=500px>
 
 ## 1.9.1
 _2022-01-01_
