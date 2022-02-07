@@ -6,6 +6,14 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.3.5
+_2022-02-07_
+- Support for huey tasks (on the python side)
+- Re-create the kolo sqlite database if we detect it has been deleted while kolo is active
+- Include query template in recorded SQL data
+- Fix crash when kolo is processing a streaming HttpResponse
+- Further stability improvements
+
 ## 1.3.4
 _2022-01-12_
 - Fix a regression in 1.3.3 where Kolo was throwing an error when it was disabled
