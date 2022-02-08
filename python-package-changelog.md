@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.3.6
+_2022-02-08_
+- A whole host of performance improvements that should make using Kolo feel a lot snappier!
+
 ## 1.3.5
 _2022-02-07_
 - Support for huey tasks (on the python side)
