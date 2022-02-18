@@ -6,6 +6,12 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.11.0
+_2022-02-18_
+- The frame virtual document has been tweaked to show information from both call and return frames
+- The language of the frame vdoc is now set to `jupyter` as opposed to `javascript`, which results in several syntax highlighting improvements
+- When the return value in the frame vdoc is valid JSON, then it will now be pretty-printed
+
 ## 1.10.0
 _2022-01-15_
 - Indicate which SQL queries are duplicate in the "SQL Queries made" view
