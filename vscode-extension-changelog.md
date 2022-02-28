@@ -6,6 +6,11 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.12.0
+_2022-02-28_
+- There is now a toggle to hide and show the flame graph below the tree visualisation
+- The Kolo powered virtual document that shows information about call and return frames (as well as their local variables) now includes code lenses that help you easily jump to the call and return locations in your code
+
 ## 1.11.0
 _2022-02-18_
 - The frame virtual document has been tweaked to show information from both call and return frames
