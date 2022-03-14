@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.3.8
+_2022-03-14_
+- Kolo will no longer crash if `git` isn't available while recording a trace
+
 ## 1.3.7
 _2022-02-22_
 - Fix bug where kolo would error when the request body included binary content. Thanks @abdulmuizzf for the report 🙌
