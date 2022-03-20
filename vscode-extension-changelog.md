@@ -6,6 +6,12 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.13.0
+_2022-03-20_
+- Add experimental `kolo.populateFrameSpanTable` to store frame_spans in separate table and power the "Function examples" feature
+- The frame visualisation will now highlight the node in which an exception happened in red (if that exception then caused a 500)
+- Fix syntax highlighting issues when viewing call or return frame data, now that the `jupyter` language id is no longer natively supported by VSCode
+
 ## 1.12.0
 _2022-02-28_
 - There is now a toggle to hide and show the flame graph below the tree visualisation
