@@ -6,6 +6,11 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.14.0
+_2022-03-28_
+- Prefix the VSCode commands that Kolo provides with "Kolo: " to make them easier to find
+- When navigating between frames (via either the sidebar or the tree visualization), default to going to the call location (as opposed to the return location)
+
 ## 1.13.0
 _2022-03-20_
 - Add experimental `kolo.populateFrameSpanTable` to store frame_spans in separate table and power the "Function examples" feature
