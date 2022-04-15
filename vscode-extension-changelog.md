@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.16.0
+_2022-04-15_
+- The frame visualisation (otherwise known as the sun chart ☀️) now includes SQL queries to give you insight into where your code is interacting with the database
+
 ## 1.15.0
 _2022-04-15_
 - Inlay hints show inline return values when Kolo has them available and when it is reasonably sure that the provided value is correct
