@@ -6,6 +6,11 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.15.0
+_2022-04-15_
+- Inlay hints show inline return values when Kolo has them available and when it is reasonably sure that the provided value is correct
+- Upgraded to version 5.0.3 of the sqlite3 package – please let us know if you're seeing sqlite related errors as of this release!
+
 ## 1.14.0
 _2022-03-28_
 - Prefix the VSCode commands that Kolo provides with "Kolo: " to make them easier to find
