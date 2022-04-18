@@ -6,6 +6,15 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.4.0
+_2022-04-18_
+- Use repr as a fallback when serializing locals. Fixes https://github.com/kolofordjango/kolo/issues/15
+- Better support for outbound HTTP requests with binary request bodies
+- Make use of Django's [MiddlewareNotUsed](https://docs.djangoproject.com/en/4.0/topics/http/middleware/#marking-middleware-as-unused) when Kolo is disabled
+- Handle case where the actual charset in an HTTP response is different from the expected one. Fixes https://github.com/kolofordjango/kolo/issues/13
+- Drop support for Python 3.6 and Django 2.2, 3.0, 3.1 as all these versions have reached their end of life
+- Include qualname information in frame data
+
 ## 1.3.8
 _2022-03-14_
 - Kolo will no longer crash if `git` isn't available while recording a trace
