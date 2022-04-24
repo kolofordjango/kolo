@@ -6,6 +6,11 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.17.0
+_2022-04-24_
+- Right clicking on a frame span in the "Frames" tree in the sidebar will now let you directly open the pane that shows information about call, return, and locals information. Previously you could only access this pane by clicking on an inline codelens
+- The frame span pane now includes navigation links which let you easily navigate to the parent and children of the current framespan.
+
 ## 1.16.0
 _2022-04-15_
 - The frame visualisation (otherwise known as the sun chart ☀️) now includes SQL queries to give you insight into where your code is interacting with the database
