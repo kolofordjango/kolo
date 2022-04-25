@@ -6,6 +6,14 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.17.2
+_2022-04-25_
+- Make sure prebuilt sqlite binaries include both glibc and musl for linux users
+
+## 1.17.1
+_2022-04-25_
+- Upgrade to v5.0.5 of node-sqlite3 which should fix kolo not starting up on linux
+
 ## 1.17.0
 _2022-04-24_
 - Right clicking on a frame span in the "Frames" tree in the sidebar will now let you directly open the pane that shows information about call, return, and locals information. Previously you could only access this pane by clicking on an inline codelens
