@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.17.3
+_2022-04-29_
+- Fix bug where if we didn't capture the user_code_call_site for any of the captured SQL queries, the whole visualisation wouldn't load
+
 ## 1.17.2
 _2022-04-25_
 - Make sure prebuilt sqlite binaries include both glibc and musl for linux users
