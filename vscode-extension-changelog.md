@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.18.0
+_2022-05-29_
+- Refactor how the sqlite database is accessed for improved reliability and to prepare us for the adoption of [SQLite WAL mode](https://sqlite.org/wal.html)
+
 ## 1.17.3
 _2022-04-29_
 - Fix bug where if we didn't capture the user_code_call_site for any of the captured SQL queries, the whole visualisation wouldn't load
