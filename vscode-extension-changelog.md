@@ -6,6 +6,11 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.18.1
+_2022-06-08_
+- Fix bug where it would sometimes take two clicks on a node in the visualisation before the corresponding file was opened
+- Cache the formatted SQL query document, so that it opens more quickly when we've previously put in the formatting work
+
 ## 1.18.0
 _2022-05-29_
 - Refactor how the sqlite database is accessed for improved reliability and to prepare us for the adoption of [SQLite WAL mode](https://sqlite.org/wal.html)
