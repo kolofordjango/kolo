@@ -1,10 +1,16 @@
 # VSCode Extension Changelog
 
-_Kolo consists of a python package and a VSCode extension. This is the changelog for the VSCode extension. To view the changelog of the Python package [go here](./python-package-changelog.md)_
-
-_We recommend using the latest version of the kolo python package and VSCode extension. That way you’ll run the most stable and feature-rich versions_
+_Kolo consists of a python package and a VSCode extension. This is the changelog for the VSCode extension. To view the changelog of the Python package [go here](./python-package-changelog.md)._ _We recommend using the latest version of the kolo python package and VSCode extension. That way you’ll run the most stable and feature-rich versions_
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
+
+## 1.19.0
+_2022-06-12_
+- The "Replay requet" functionality which was previously only available on the top level trace is now also accessible via the perhaps more suitable "Request" section
+
+  <img width="405" alt="image" src="https://user-images.githubusercontent.com/7718702/173251016-18265998-1eca-41c0-8a52-5bf7419fe07e.png">
+
+- Adjusted the internal URIs of some of the virtual documents we open (request/response) to be more consistent. If you've already opened the request of a given trace as a tab, and you click to open it again, it will now jump to the already open tab instead of opening a new tab.
 
 ## 1.18.1
 _2022-06-08_
