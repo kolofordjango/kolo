@@ -6,6 +6,13 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.5.0
+_2022-06-15_
+- Start using SQLite WAL-mode, which allows for both writing and reading to SQLite at the same time. 
+- Kolo will now always store its db in the `.kolo` directory. The previously deprecated storage location using the operating system's user data directory is no longer supported. The `KOLO_STORE_IN_PROJECT` and `KOLO_PROJECT_NAME` settings are no longer supported – `KOLO_STORE_IN_PROJECT` is now always true.
+- Numerous performance improvements to speed up Kolo
+- Add support for a logging filter, so that Kolo can capture log output for later display
+
 ## 1.4.0
 _2022-04-18_
 - Use repr as a fallback when serializing locals. Fixes https://github.com/kolofordjango/kolo/issues/15
