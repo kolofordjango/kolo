@@ -4,6 +4,10 @@ _Kolo consists of a python package and a VSCode extension. This is the changelog
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.19.1
+_2022-06-19_
+- Fix issue where the sun chart visualization would not load for traces with a very large number of frames 
+
 ## 1.19.0
 _2022-06-12_
 - The "Replay requet" functionality which was previously only available on the top level trace is now also accessible via the perhaps more suitable "Request" section
