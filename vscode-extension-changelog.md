@@ -4,6 +4,10 @@ _Kolo consists of a python package and a VSCode extension. This is the changelog
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.20.1
+_2022-06-29_
+- Fix an issue where the timestamp of a trace was parsed incorrectly resulting in the incorrect relative time being displayed
+
 ## 1.20.0
 _2022-06-28_
 - Prepare extension for new data model that accounts for traces which do not strictly start with a served HTTP request and do not strictly end with an HTTP response
