@@ -6,6 +6,14 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.6.0
+_2022-06-29_
+- Make a new mode of collecting traces available via `use_frame_boundaries = true` in `.kolo/config.toml` where each trace does not necessarily have to start with a served HTTP request and does not necessarily have to end with an HTTP response
+- Add the `kolo.enable` decorator
+- Add the `kolo.enabled` context manager
+- Upgrade dependencies
+- Fix a bug with args serialization the logging filter
+
 ## 1.5.0
 _2022-06-15_
 - Start using SQLite WAL-mode, which allows for both writing and reading to SQLite at the same time. 
