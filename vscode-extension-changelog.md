@@ -4,6 +4,11 @@ _Kolo consists of a python package and a VSCode extension. This is the changelog
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.20.0
+_2022-06-28_
+- Prepare extension for new data model that accounts for traces which do not strictly start with a served HTTP request and do not strictly end with an HTTP response
+- Fix a number of bugs where the extension would error if a request body is null
+
 ## 1.19.1
 _2022-06-19_
 - Fix issue where the sun chart visualization would not load for traces with a very large number of frames 
