@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.7.0
+_2022-06-30_
+- Change the default value of `use_frame_boundaries` to `true`.
+
 ## 1.6.1
 _2022-06-30_
 - Fix a bug with 404 response handling when `use_frame_boundaries = true`.
