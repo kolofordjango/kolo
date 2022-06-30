@@ -6,6 +6,10 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.6.1
+_2022-06-30_
+- Fix a bug with 404 response handling when `use_frame_boundaries = true`.
+
 ## 1.6.0
 _2022-06-29_
 - Make a new mode of collecting traces available via `use_frame_boundaries = true` in `.kolo/config.toml` where each trace does not necessarily have to start with a served HTTP request and does not necessarily have to end with an HTTP response
