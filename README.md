@@ -28,29 +28,35 @@ Kolo consists of a Python package and a VSCode extension:
 - [Changelog for Kolo VSCode extension](./vscode-extension-changelog.md)
 
 ### New & Noteworthy features
-- The frame visualization now includes a :sparkles: beautiful :sparkles: flame graph that shows timing information for each function call ⏱️ 
+- The frame visualization now includes a :sparkles: beautiful :sparkles: flame graph that shows timing information for each function call ⏱️
 
   <img src="https://user-images.githubusercontent.com/7718702/145239425-ad942d9c-b0df-4fb5-b885-4004c80b5694.png" width=500px>
 - Show which line of your code caused Django execute a SQL query
 
   <img width="300px" src="https://user-images.githubusercontent.com/7718702/144677065-8ffa6d46-1130-4a47-b48e-8210e61a0a88.png">
-      
+
 - Significantly simpler Kolo setup if you use Docker for local Django development
 - Support for custom request descriptions so that you can easily distinguish different requests even if they arrive at the same path
 
   <img width="300px" src="https://user-images.githubusercontent.com/7718702/140084399-27e2d472-2b8d-4ff2-80a7-3154730a13c9.png">
 - Much improved support for :sparkles: **exceptions** :sparkles: Jump straight to where the problem occurred and see the all the contextual information to understand _why_ it happened
-    
+
     <img  width="300px" src="https://user-images.githubusercontent.com/7718702/133599943-13502c16-62ef-4e2e-8ac9-5916ff355904.png">
     <br />
     <br />
-    
+
     <img width="200px" src="https://user-images.githubusercontent.com/7718702/133600081-037413f9-0708-4ef9-aa02-0cf85ca75b46.png">
 
 
 ## Installation
-1. Install the python package using `pip install kolo`
-2. Add Kolo to the top of your `MIDDLEWARE` in settings.py : `"kolo.middleware.KoloMiddleware"`
+1. Install the python package using
+```
+pip install kolo
+```
+2. Add Kolo to the top of your `MIDDLEWARE` in settings.py :
+```
+"kolo.middleware.KoloMiddleware",
+```
 3. Make sure DEBUG is True in your settings.py file, then start your local Django server the way you normally would (for example: `python manage.py runserver`)
 4. Install the VSCode extension: https://marketplace.visualstudio.com/items?itemName=kolo.kolo
    - Kolo will show up with an icon in the left sidebar in VSCode <img width="40px" src="https://user-images.githubusercontent.com/7718702/120314341-0c965980-c2d3-11eb-9f1d-c3d9bcccd1c9.png">
@@ -282,4 +288,3 @@ The data Kolo collects at runtime is stored in a local SQLite database on your m
 Running into problems? Kolo is in beta, so it's possible you will run into a problem. When you do, please open an issue on this repository or email us: support@kolo.app
 
 Looking for assistance? We're here to help get Kolo set up on your codebase: [Schedule Kolo set up](https://calendly.com/wilhelmklopp)
-
