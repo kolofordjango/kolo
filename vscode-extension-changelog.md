@@ -4,6 +4,10 @@ _Kolo consists of a python package and a VSCode extension. This is the changelog
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 1.21.0
+_2022-07-12_
+- Logs 📜! Kolo now shows you everything that was logged in each trace 🙌 
+
 ## 1.20.2
 _2022-07-11_
 - Fix processing exceptions in use_frame_boundaries=True traces
