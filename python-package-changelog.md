@@ -6,6 +6,13 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 1.8.0
+
+_2022-07-22_
+- Fix threadsafety bug in `KoloMiddleware` causing traces to be lost when too many requests happen close together with `manage.py runserver`.
+- Optimise the main profiling loop by 30-40%.
+- Drop support for setting `use_frame_boundaries` to `false`.
+
 ## 1.7.0
 _2022-06-30_
 - Change the default value of `use_frame_boundaries` to `true`.
