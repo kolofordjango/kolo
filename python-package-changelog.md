@@ -6,6 +6,30 @@ _We recommend using the latest version of the kolo python package and VSCode ext
 
  [![PyPI version](https://img.shields.io/pypi/v/kolo?label=python%20package)](https://pypi.org/project/kolo/)
 
+## 2.0.1
+
+_2022-09-09_
+
+- Don't lose trace data when an object has a broken `__repr__`.
+
+## 2.0.0
+
+_2022-09-09_
+
+- Record when a background job ends when using eager mode for celery or huey.
+- Record data about Django template rendering.
+- Record the data loaded from the database by sql queries in Django.
+- Support tracing pytest tests with `kolo run`.
+- Support user-defined includes and ignores when processing exceptions.
+- Add `--one-trace-per-test` option to `kolo run` to better support analysing tests.
+- Add `kolo load-trace` and `kolo dump-trace` commands to support sharing interesting traces.
+- Add experimental support for test generation with `kolo generate-test`.
+- Add a timestamp to all trace items.
+- Ensure `.kolo/config.toml` exists so users don't need to manually create it.
+- Fix the `kolo.enable` decorator so it actually works as a decorator with the `config` argument.
+- Stop storing config data in Kolo's database.
+- Remove the `kolo config` command.
+
 ## 1.8.0
 
 _2022-07-22_
