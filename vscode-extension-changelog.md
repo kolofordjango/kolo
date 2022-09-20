@@ -4,6 +4,29 @@ _Kolo consists of a python package and a VSCode extension. This is the changelog
 
 [![vscode extension version](https://img.shields.io/visual-studio-marketplace/v/kolo.kolo?label=VSCode%20extension)](https://marketplace.visualstudio.com/items?itemName=kolo.kolo)
 
+## 2.1.0
+_2022-09-20_
+- Improve experience working with unprocessable traces
+  - No repetitive toast every 500ms due to the "latest" traces being unprocessable
+  - A full page of 10 traces will be displayed even if the time span covered by the page includes an unprocessable trace (unprocessable traces continue to not be displayed)
+    - When paginating through history, it's possible to continue paginating even when encountering a full page of unprocessable traces
+- FrameSpan Navigation improvements:
+  - When clicking on SQL query in the visualization, the SQL query is revealed in the sidebar as well as in the sql query vdoc
+  - Each frame span and sql query in the sidebar have a new button to jump straight to the call site
+  - The framespan vdoc has a new "Show in sidebar" codelens that reveals the current framespan in the sidebar
+
+<img width="438" alt="image" src="https://user-images.githubusercontent.com/7718702/191257235-43c83e12-335f-499b-bb07-87abb7679ace.png">
+
+<img width="438" alt="image" src="https://user-images.githubusercontent.com/7718702/191257322-7f41df6a-e183-406d-b904-4fc6888f5265.png">
+
+## 2.0.0
+_2022-09-09_
+- :sparkles: Major :sparkles: refactor of the way Kolo builds up trees of frames
+    - Adds support for `kolo run`, the `@kolo.enable` decorator, and the `with kolo.enabled()` context manager
+    - Display of nested served HTTP request, which is particularly useful when looking at a trace of a test that makes requests using Django's test request client
+- Drop support for frames that were captured using use_frame_boundaries=False (use_frame_boundaries=True has been the default since version 1.7.0 of the kolo python package)
+- Add a right-click menu item on the trace to view the raw JSON data of the trace
+
 ## 1.21.0
 _2022-07-12_
 - Logs 📜! Kolo now shows you everything that was logged in each trace 🙌 
