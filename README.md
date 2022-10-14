@@ -24,8 +24,8 @@ Kolo is in beta so there's a chance that you will encounter a problem or bug. Wh
 ## Changelog
 Kolo consists of a Python package and a VSCode extension:
 
-- [Changelog for Kolo Python package](./python-package-changelog.md)
-- [Changelog for Kolo VSCode extension](./vscode-extension-changelog.md)
+- [Changelog for Kolo Python package](https://docs.kolo.app/en/latest/python-changelog.html)
+- [Changelog for Kolo VSCode extension](https://docs.kolo.app/en/latest/vscode-changelog.html)
 
 ### New & Noteworthy features
 - The frame visualization now includes a :sparkles: beautiful :sparkles: flame graph that shows timing information for each function call ⏱️
